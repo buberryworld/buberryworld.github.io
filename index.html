@@ -5,22 +5,42 @@
     margin: auto;
     filter: invert(100%);
   }
-  .container {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  flex-direction: column;
-  justify-content: start;
-  align-items: auto;
-  align-content: start
-}
-.item {
-  flex: 1 1 auto;
-  margin: 3px;
-}
+  .flex-container {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
 </style>
 
 <body bgcolor="black">
-  <div class="content">
+  <div class="content" class="flex-container" class="flex-item">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="946" height="1106">
       <path d="M 0.000000 3.984375 L 0.977539 3.984375 L 2.024902 8.845215 L 2.884277 5.740723 L 3.727539 5.740723 L 4.597656 8.845215 L 5.645020 3.984375 L 6.622559 3.984375 L 5.215332 10.000000 L 4.270020 10.000000 L 3.308594 6.702148 L 2.352539 10.000000 L 1.407227 10.000000 Z " fill="rgb(0, 0, 0)" fill-opacity="1.000000" />
       <path d="M 7.000000 3.984375 L 7.977539 3.984375 L 9.024902 8.845215 L 9.884277 5.740723 L 10.727539 5.740723 L 11.597656 8.845215 L 12.645020 3.984375 L 13.622559 3.984375 L 12.215332 10.000000 L 11.270020 10.000000 L 10.308594 6.702148 L 9.352539 10.000000 L 8.407227 10.000000 Z " fill="rgb(0, 0, 0)" fill-opacity="1.000000" />
