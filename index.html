@@ -6,8 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link href="index.css" rel="stylesheet" />
         <style>
+        a.class1 {
+            color: cornflowerblue;
+        }    
             /* unvisited link */
         a:link {
+            text-decoration: none;
             color:cornflowerblue;
         }
 
@@ -18,12 +22,21 @@
 
         /* mouse over link */
         a:hover {
+            text-decoration: underline;
             color: hotpink;
         }
         
         /* selected link */
         a:active {
             color:darkgreen;
+        }
+        a.class2:link {
+            text-decoration:none;
+            color:salmon;
+        }
+        a.class2:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
         }
         </style>
     </head>
@@ -114,7 +127,7 @@
                     └ ─ ─ ─ ─ ─ ─                                                                    └───┬────────┘                        │       
                                                                                                          │    <a href="mailto:bu@buberryworldwide.com">bu</a>                           │       
                                                                                                          │        > @buberryworldwide.com  │       
-                                                                                                         │ <a href="mailto:berry@buberryworldwide.com">berry</a>                           │       
+                                                                                                         │ <a href="mailto:berry@buberryworldwide.com" class="class2">berry</a>                           │       
                                                                                                          │                                 │       
                                                                                                          └─────────────────────────────────┘       </code></pre>
 </body>
