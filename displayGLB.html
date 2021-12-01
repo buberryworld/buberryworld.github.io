@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.42" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="index.css" rel="stylesheet" />
+        <style>
+        a.class1 {
+            color: cornflowerblue;
+        }    
+            /* unvisited link */
+        a:link {
+            text-decoration: none;
+            color:cornflowerblue;
+        }
+
+        /* visited link */
+        a:visited {
+            color:turquoise;
+        }
+
+        /* mouse over link */
+        a:hover {
+            text-decoration: underline;
+            color: hotpink;
+        }
+        
+        /* selected link */
+        a:active {
+            color:darkgreen;
+        }
+        a.class2:link {
+            text-decoration:none;
+            color:yellow;
+        }
+        a.class2:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+        </style>
+    </head>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<body bgcolor="#003000" text="#c0c030">
+    <model-viewer camera-controls alt="ASCII Card - Wes" src="../ascii_glb/ASCII_Uncle_Wessy.glb">
+    </model-viewer>
+    </body>
+    </html>
+    
