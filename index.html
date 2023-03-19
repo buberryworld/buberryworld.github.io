@@ -3,18 +3,61 @@
   <head>
     <title>Terminal-like Section</title>
     <style>
+
+        body {
+  background-color: #F1F5FB;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0h24a8 8 0 0 1 8 8v24a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8zm2 2a6 6 0 0 0-6 6v24a6 6 0 0 0 6 6h24a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6H10z' fill='%23e3eaf6' fill-opacity='0.6' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+      /* Define Solarized colors */
+      :root {
+        --base03: #002b36;
+        --base02: #073642;
+        --base01: #586e75;
+        --base00: #657b83;
+        --base0: #839496;
+        --base1: #93a1a1;
+        --base2: #eee8d5;
+        --base3: #fdf6e3;
+        --yellow: #b58900;
+        --orange: #cb4b16;
+        --red: #dc322f;
+        --magenta: #d33682;
+        --violet: #6c71c4;
+        --blue: #268bd2;
+        --cyan: #2aa198;
+        --green: #859900;
+      }
+
+      /* Apply Solarized colors to the terminal */
       #terminal {
-        background-color: black;
-        color: white;
+        background-color: var(--base03);
+        color: var(--base0);
         font-family: monospace;
         padding: 20px;
         height: 600px;
         overflow-y: auto;
+        border: 5px solid #555;
+        padding: 10px;
+      }
+
+      /* Style the links */
+      #terminal a {
+        color: var(--blue);
+      }
+
+      #terminal a:hover {
+        color: var(--cyan);
+      }
+
+      /* Hide the expanded content by default */
+      .hidden {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <h1>My Terminal-like Section</h1>
+    <h1>Bu's Terminal Interface</h1>
     <div id="terminal">
         <pre>
         BUBERRY WORLDWIDE                 
@@ -41,13 +84,208 @@
         NAVIGATION
         _____________________________________________
         
-        [<a href="#">HOME</a>]<br>  
-        [<a href="#">FOCUS AREAS</a>]<br>  
-        [<a href="#">OUR PLATFORMS</a>]<br>
-        [<a href="#">MOODLE</a>]<br>  
-        [<a href="#">USHAHIDI</a>]
+        <a href="#" class="expandable" data-target="home">HOME</a><br>  
+        <div id="home" class="hidden">
+          <p>
+            <pre>
+                BUBERRY WORLDWIDE
+                    
+  We are a network of people and organizations committed to 
+  creating a more sustainable future through regenerative 
+  agroforestry. Our mission is to connect and empower people 
+  to take action towards a more just and regenerative world.
+  
+      
+    
+  GET INVOLVED
+  ------------
+  
+  Join us in our mission to create a more sustainable future.
+  
+  - Donate to support our work
+  - Sign up for our newsletter
+  - Follow us on social media
+  
+  
+  OUR WORK
+  --------
+  
+  Learn more about our work and how we are making a difference.
+  
+  - Our approach to regenerative agroforestry
+  - Our current projects and initiatives
+  - Our partners and collaborators
+  
+  
+  CONTACT US
+  ----------
+  
+  Have a question or want to get in touch? We'd love to hear from you!
+  
+  - Email: bu@buberryworldwide.com
+  - Phone: +1 (629) 395-8536
+  - Address: Andromeda, Milky Way
+            </pre>
+          </p>
+        </div>
+        <a href="#" class="expandable" data-target="focus-areas">FOCUS AREAS</a><br>  
+        <div id="focus-areas" class="hidden">
+          <p>
+            <pre>
+                FOCUS AREAS                 
+                
+                At Buberry Worldwide, we focus on the following areas to 
+                promote regenerative agroforestry and sustainable 
+                development. Learn more about each of these areas below. 
+                
+                
+                CLIMATE CHANGE ADAPTATION
+                -------------------------
+                
+                Climate change poses a significant threat to global food 
+                security and environmental sustainability. We work to 
+                develop and promote regenerative agroforestry practices 
+                that build resilience to climate change, mitigate greenhouse 
+                gas emissions, and enhance carbon sequestration. 
+                
+                
+                EDUCATION AND TRAINING
+                ----------------------
+                
+                We believe that education and training are key to building 
+                capacity for sustainable development. We offer a range of 
+                courses and resources on regenerative agroforestry, 
+                sustainability, and related topics through our Moodle 
+                learning management system (LMS). 
+                
+                
+                SOCIAL JUSTICE AND EQUITY
+                --------------------------
+                
+                Regenerative agroforestry has the potential to promote social 
+                justice and equity by providing livelihood opportunities to 
+                marginalized communities, promoting gender equality, and 
+                strengthening community resilience. We work to ensure that 
+                our projects and initiatives are inclusive and equitable. 
+                
+                
+                ECOSYSTEM RESTORATION
+                ----------------------
+                
+                Degradation of ecosystems is a major threat to biodiversity 
+                and human well-being. We work to restore degraded ecosystems 
+                through regenerative agroforestry practices that promote 
+                biodiversity conservation, soil health, and ecosystem 
+                services. 
+                
+                
+                RESEARCH AND INNOVATION
+                ------------------------
+                
+                We are committed to advancing the science and practice of 
+                regenerative agroforestry through research and innovation. 
+                We collaborate with researchers and practitioners around 
+                the world to develop and test new techniques, technologies, 
+                and approaches to sustainable development. 
+            </pre>
+          </p>
+        </div>
+        <a href="#" class="expandable" data-target="our-platforms">OUR PLATFORMS</a><br>
+        <div id="our-platforms" class="hidden">
+          <p>
+            <pre>
+                OUR PLATFORMS                 
+                   
+                At Buberry Worldwide, we leverage technology to connect 
+                people, data, and knowledge to drive real-world action 
+                toward regenerative agroforestry and sustainable 
+                development. Learn more about our platforms below. 
+                
+                
+                MAPPING AND DATA COLLECTION PLATFORM
+                -------------------------------------
+                
+                Our mapping and data collection platform enables us to 
+                collect and analyze data on regenerative agroforestry 
+                systems and measure their impact. The platform allows users 
+                to visualize data on maps, collect data using mobile devices 
+                and sensors, and analyze data using a range of tools and 
+                technologies. 
+                
+                
+                MOODLE LEARNING MANAGEMENT SYSTEM (LMS)
+                ---------------------------------------
+                
+                Our Moodle LMS platform offers a range of courses and 
+                resources to support education and training on agroforestry, 
+                sustainability, and more. The platform features interactive 
+                learning materials, quizzes and assessments, discussion 
+                forums, and other tools to support learner engagement and 
+                knowledge retention. 
+                
+                
+                USHAHIDI CROWDSOURCING PLATFORM
+                -------------------------------
+                
+                Our Ushahidi platform enables crowdsourcing of information 
+                and feedback from stakeholders involved in regenerative 
+                agroforestry projects. The platform allows users to report 
+                observations, share feedback, and contribute to decision-making 
+                related to project planning, implementation, and monitoring 
+                and evaluation. 
+                
+                
+                BLOCKCHAIN-BASED TRACEABILITY PLATFORM
+                --------------------------------------
+                
+                Our blockchain-based traceability platform enables 
+                transparency and traceability in supply chains related to 
+                regenerative agroforestry products. The platform uses 
+                distributed ledger technology to provide secure, tamper-proof 
+                records of product origin, production, and distribution, 
+                enabling consumers to make informed choices about the products 
+                they buy and their impact on the environment and society. 
+                
+                
+                REMOTE SENSING AND ANALYTICS PLATFORM
+                -------------------------------------
+                
+                Our remote sensing and analytics platform leverages satellite 
+                imagery, machine learning, and other technologies to monitor 
+                and analyze environmental and land-use changes related to 
+                regenerative agroforestry systems. The platform provides 
+                timely and accurate information on ecosystem health, land-use 
+                change, and other key indicators to support decision-making 
+                and planning related to sustainable development. 
+            </pre>
+          </p>
+        </div>
+        <a href="#" class="expandable" data-target="moodle">MOODLE</a><br>  
+        <div id="moodle" class="hidden">
+          <p>This is the MOODLE section</p>
+        </div>
+        <a href="#" class="expandable" data-target="ushahidi">USHAHIDI</a><br>
+        <div id="ushahidi" class="hidden">
+          <p>This is the USHAHIDI section</p>
+        </div>
         </pre>
     </div>
     <p>Here is some other content that is not in the terminal section.</p>
+    <script>
+      const expandables = document.querySelectorAll('.expandable');
+
+      expandables.forEach(expandable => {
+        expandable.addEventListener('click', (event) => {
+          event.preventDefault();
+          const targetId = event.target.dataset.target;
+          const target = document.getElementById(targetId);
+          if (target.classList.contains('hidden')) {
+            target.classList.remove('hidden');
+          } else {
+            target.classList.add('hidden');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
