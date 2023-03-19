@@ -5,7 +5,8 @@
     <style>
 
       body {
-         background-color: #1a1a1a;
+        background-image: url("images/background2.png");
+        background-size: cover; /* Set the size of the background to cover the entire screen */
             }
       
       h1 {
@@ -39,6 +40,19 @@
           transform: scale(1);
         }
       }
+      
+      .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+      .logo {
+  display: block;
+  text-align: center;
+}
+
+
 /* Define hacker colors */
 :root {
   --background: #111;
@@ -60,6 +74,8 @@
   overflow-y: auto;
   border: 5px solid #555;
   max-width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.753); /* Add a drop shadow with a 10px blur radius */
+
 }
 
 /* Style the links */
@@ -88,15 +104,6 @@
   <body><br><br>
  
     <div id="terminal">
-      <pre>
-
-  __  ,  ,  __   _,,_  ,_    ,  ,   ,  ,  _, ,_  ,   ,_  ,  , ___, ,_   _, 
-  '|_) |  | '|_) /_,|_) |_)   \_/    | ,| / \,|_) |   | \,| ,|' |   | \,/_, 
-  _|_)'\__| _|_)'\_'| \'| \  , /`    |/\|'\_/'| \'|___|_/ |/\| _|_,_|_/'\_  
- '        `'       `'  `'  `(_/      '  ` '   '  `  '     '  `'   '       ` 
-                                                                            
- 
-      </pre>
         <pre>
         BUBERRY WORLDWIDE                 
         _____________________________________________
