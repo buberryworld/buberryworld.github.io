@@ -60,8 +60,9 @@
   color: var(--foreground);
   font-family: 'Source Code Pro', monospace;
   font-size: 14px;
-  padding: 0px;
-  height: 728px;
+  padding: 5px;
+  max-height: 700px;
+  min-height: fit-content;
   overflow-y: auto;
   border: 5px solid #555;
   max-width: 60%;
@@ -78,7 +79,11 @@
   color: var(--hover);
 }
 
+.banner {
+  text-align: center;
+  color: whitesmoke;
 
+}
  
 
 /* Hide the expanded content by default */
@@ -87,19 +92,30 @@
 }
 
   /* Mobile styles */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 728px) {
     #terminal {
       max-width: 100%;
       height: auto;
-      font-size: 16px;
-      border-width: 3px;
+      font-size: 14px;
+      border-width: 1px;
     }
   }
 
     </style>
   </head>
-  <body><br><br>
- 
+  <body>
+    <div class="banner">
+    <pre>
+dP                dP                                           
+88                88                                           
+88d888b. dP    dP 88d888b. .d8888b. 88d888b. 88d888b. dP    dP 
+88'  `88 88    88 88'  `88 88ooood8 88'  `88 88'  `88 88    88 
+88.  .88 88.  .88 88.  .88 88.  ... 88       88       88.  .88 
+88Y8888' `88888P' 88Y8888' `88888P' dP       dP       `8888P88 
+                                                           .88 
+                                                       d8888P  
+    </pre>
+    </div>
     <div id="terminal">
     <pre>
     BUBERRY WORLDWIDE                 
