@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>buberry@worldwide:~$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
 
       body {
@@ -52,17 +54,6 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
-  /* Styles to apply on screens smaller than 768px */
-  #terminal {
-    max-width: 100%; /* Set the maximum width of the terminal to 100% */
-    height: auto; /* Set the height of the terminal to auto */
-    border: none; /* Remove the border */
-    font-size: 16px;
-    font-family: 'Source Code Pro', monospace;
-  }
-}
-
 /* Define hacker colors */
 :root {
   --background: #111;
@@ -105,10 +96,16 @@
   display: none;
 }
 
-/* Add text shadow to make the text glow or pulse */
-#terminal pre {
-  text-shadow: 0px 0px 1px var(--yellow);
-}
+  /* Mobile styles */
+  @media screen and (max-width: 600px) {
+    #terminal {
+      max-width: 100%;
+      height: auto;
+      font-size: 16px;
+      border-width: 3px;
+    }
+  }
+
     </style>
   </head>
   <body><br><br>
@@ -164,7 +161,7 @@
                         
               <span class="section">CONTACT US</span>
                         
-              <span class="item">Have a question or want to get in touch? We'd love to hear from you!</span>
+              <span class="item">Have a question or want to get in touch?</span>
                         
               <span class="item">- Email: bu@buberryworldwide.com</span>
               <span class="item">- Address: Andromeda, Milky Way</span>
