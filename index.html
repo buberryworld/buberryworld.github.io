@@ -1,64 +1,102 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Terminal-like Section</title>
+    <title>buberry@worldwide:~$</title>
     <style>
 
-        body {
-  background-color: #F1F5FB;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0h24a8 8 0 0 1 8 8v24a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8zm2 2a6 6 0 0 0-6 6v24a6 6 0 0 0 6 6h24a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6H10z' fill='%23e3eaf6' fill-opacity='0.6' fill-rule='evenodd'/%3E%3C/svg%3E");
+      body {
+         background-color: #1a1a1a;
+            }
+      
+      h1 {
+        color: #b58900; /* Yellow color of Solarized */
+          }
+          
+      .social-media {
+        color: #dadada; /* Change font color to white */
+        font-family: 'Courier New', Courier, monospace; /* Change font family to a monospace font */
+        font-size: 18px; /* Change font size */
+        margin: 20px; /* Add margin to the element */
+          }
+
+      .pulse-link {
+        color: #000; /* Change the color to your desired color */
+        text-decoration: none; /* Remove the underline */
+        animation: pulse 2s infinite; /* Add the pulse animation */
+          }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+/* Define hacker colors */
+:root {
+  --background: #111;
+  --foreground: #B2B2B2;
+  --accent: #8FE388;
+  --link: #A7D8DE;
+  --hover: #E4F1FE;
 }
 
-      /* Define Solarized colors */
-      :root {
-        --base03: #002b36;
-        --base02: #073642;
-        --base01: #586e75;
-        --base00: #657b83;
-        --base0: #839496;
-        --base1: #93a1a1;
-        --base2: #eee8d5;
-        --base3: #fdf6e3;
-        --yellow: #b58900;
-        --orange: #cb4b16;
-        --red: #dc322f;
-        --magenta: #d33682;
-        --violet: #6c71c4;
-        --blue: #268bd2;
-        --cyan: #2aa198;
-        --green: #859900;
-      }
+/* Apply hacker colors to the terminal */
+#terminal {
+  margin: 0 auto;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  padding: 0px;
+  height: 728px;
+  overflow-y: auto;
+  border: 5px solid #555;
+  max-width: 60%;
+}
 
-      /* Apply Solarized colors to the terminal */
-      #terminal {
-        background-color: var(--base03);
-        color: var(--base0);
-        font-family: monospace;
-        padding: 20px;
-        height: 600px;
-        overflow-y: auto;
-        border: 5px solid #555;
-        padding: 10px;
-      }
+/* Style the links */
+#terminal a {
+  color: var(--link);
+}
 
-      /* Style the links */
-      #terminal a {
-        color: var(--blue);
-      }
+#terminal a:hover {
+  color: var(--hover);
+}
 
-      #terminal a:hover {
-        color: var(--cyan);
-      }
 
-      /* Hide the expanded content by default */
-      .hidden {
-        display: none;
-      }
+ 
+
+/* Hide the expanded content by default */
+.hidden {
+  display: none;
+}
+
+/* Add text shadow to make the text glow or pulse */
+#terminal pre {
+  text-shadow: 0px 0px 1px var(--yellow);
+}
     </style>
   </head>
-  <body>
-    <h1>Bu's Terminal Interface</h1>
+  <body><br><br>
+ 
     <div id="terminal">
+      <pre>
+
+  __  ,  ,  __   _,,_  ,_    ,  ,   ,  ,  _, ,_  ,   ,_  ,  , ___, ,_   _, 
+  '|_) |  | '|_) /_,|_) |_)   \_/    | ,| / \,|_) |   | \,| ,|' |   | \,/_, 
+  _|_)'\__| _|_)'\_'| \'| \  , /`    |/\|'\_/'| \'|___|_/ |/\| _|_,_|_/'\_  
+ '        `'       `'  `'  `(_/      '  ` '   '  `  '     '  `'   '       ` 
+                                                                            
+ 
+      </pre>
         <pre>
         BUBERRY WORLDWIDE                 
         _____________________________________________
@@ -87,44 +125,33 @@
         <a href="#" class="expandable" data-target="home">HOME</a><br>  
         <div id="home" class="hidden">
           <p>
-            <pre>
-                BUBERRY WORLDWIDE
-                    
-  We are a network of people and organizations committed to 
-  creating a more sustainable future through regenerative 
-  agroforestry. Our mission is to connect and empower people 
-  to take action towards a more just and regenerative world.
-  
-      
-    
-  GET INVOLVED
-  ------------
-  
-  Join us in our mission to create a more sustainable future.
-  
-  - Donate to support our work
-  - Sign up for our newsletter
-  - Follow us on social media
-  
-  
-  OUR WORK
-  --------
-  
-  Learn more about our work and how we are making a difference.
-  
-  - Our approach to regenerative agroforestry
-  - Our current projects and initiatives
-  - Our partners and collaborators
-  
-  
-  CONTACT US
-  ----------
-  
-  Have a question or want to get in touch? We'd love to hear from you!
-  
-  - Email: bu@buberryworldwide.com
-  - Phone: +1 (629) 395-8536
-  - Address: Andromeda, Milky Way
+            <pre class="ascii">
+              <span class="title">BUBERRY WORLDWIDE</span>
+        
+              <span class="subtitle">We are a network of people and organizations committed to </span>
+              <span class="subtitle">creating a more sustainable future through regenerative </span>
+              <span class="subtitle">agroforestry. Our mission is to connect and empower people </span>
+              <span class="subtitle">to take action towards a more just and regenerative world.</span>
+                        
+              <span class="section">GET INVOLVED</span>
+                        
+              <span class="item">- Donate to support our work</span>
+              <span class="item">- Sign up for our newsletter</span>
+              <span class="item">- Follow us on social media</span>
+                        
+              <span class="section">OUR WORK</span>
+                        
+              <span class="item">- Our approach to regenerative agroforestry</span>
+              <span class="item">- Our current projects and initiatives</span>
+              <span class="item">- Our partners and collaborators</span>
+                        
+              <span class="section">CONTACT US</span>
+                        
+              <span class="item">Have a question or want to get in touch? We'd love to hear from you!</span>
+                        
+              <span class="item">- Email: bu@buberryworldwide.com</span>
+              <span class="item">- Address: Andromeda, Milky Way</span>
+                     
             </pre>
           </p>
         </div>
@@ -132,11 +159,11 @@
         <div id="focus-areas" class="hidden">
           <p>
             <pre>
-                FOCUS AREAS                 
-                
-                At Buberry Worldwide, we focus on the following areas to 
-                promote regenerative agroforestry and sustainable 
-                development. Learn more about each of these areas below. 
+            FOCUS AREAS                 
+            
+            At Buberry Worldwide, we focus on the following areas to 
+            promote regenerative agroforestry and sustainable 
+            development. Learn more about each of these areas below. 
                 
                 
                 CLIMATE CHANGE ADAPTATION
@@ -262,15 +289,48 @@
         </div>
         <a href="#" class="expandable" data-target="moodle">MOODLE</a><br>  
         <div id="moodle" class="hidden">
-          <p>This is the MOODLE section</p>
+          <p>
+          Our Moodle LMS offers a range of courses and resources to support 
+          education and training on agroforestry, sustainability, and more. 
+          Whether you're a farmer, student, or environmental enthusiast, our 
+          platform provides interactive learning materials, quizzes and 
+          assessments, discussion forums, and other tools to support your 
+          learning journey.
+                          
+          With our Moodle LMS, you'll have access to a community of learners and 
+          experts in the field of regenerative agroforestry. Our courses cover a 
+          variety of topics, including:
+                          
+                - Introduction to Agroforestry
+                - Sustainable Farming Practices
+                - Climate Change and Biodiversity Conservation
+                - Ecosystem Services and Natural Resource Management
+                - Social and Economic Impacts of Agroforestry
+                          
+          To get started, simply create an account and browse our course catalog. 
+          We look forward to having you as part of our community and advancing 
+          our mission of driving real-world action toward regenerative 
+          agroforestry and sustainable development.
+                          
+                Join the learning community now! <a href="https://edu.buberryworldwide.com" target="_blank"> ---> 🎓</a>
+        </p>
         </div>
+
         <a href="#" class="expandable" data-target="ushahidi">USHAHIDI</a><br>
         <div id="ushahidi" class="hidden">
-          <p>This is the USHAHIDI section</p>
+        <p>This is the USHAHIDI section</p>
         </div>
         </pre>
+    <a href="#" class="pulse-link">--More--</a>
     </div>
-    <p>Here is some other content that is not in the terminal section.</p>
+    <div style="text-align:center;">
+      <p class="social-media">
+        Follow us on: 
+        <a href="https://twitter.com/buberryworld" target="_blank">🐦</a>
+        <a href="https://www.facebook.com/buberryworldwide" target="_blank">📘</a>
+        <a href="https://www.instagram.com/buberryworldwide/" target="_blank">📷</a>
+      </p>
+    </div>
     <script>
       const expandables = document.querySelectorAll('.expandable');
 
