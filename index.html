@@ -7,7 +7,7 @@
     <style>
 
       body {
-        background-image: url("images/background2.png");
+        background-image: url("./background2.png");
         background-size: cover; /* Set the size of the background to cover the entire screen */
             }
       
@@ -48,18 +48,39 @@
   word-wrap: break-word;
 }
 
-
-
-/* Define hacker colors */
-:root {
-  --background: #111;
-  --foreground: #B2B2B2;
-  --accent: #8FE388;
-  --link: #A7D8DE;
-  --hover: #E4F1FE;
+b {
+  font-weight: bold;
+  background: linear-gradient(to right, #bd93f9, #ff79c6);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-/* Apply hacker colors to the terminal */
+div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+
+/* Color scheme for terminal */
+:root {
+  --text-color: #d1d1d1;
+  --accent-color: #50fa7b;
+  --background-color: #272822;
+  --heading-color-1: #F8F8F2;
+  --heading-color-2: #F8F8F2;
+  --heading-color-3: #F8F8F2;
+  --link-color: #bd93f9;
+  --visited-link-color: #ff79c6;
+  --button-color: #50fa7b;
+  --button-text-color: #F8F8F2;
+  --hover: #44475a; 
+}
+
+
+/* Apply theme to terminal */
 #terminal {
   margin: 0 auto;
   background-color: var(--background);
@@ -67,11 +88,13 @@
   font-family: 'Source Code Pro', monospace;
   font-size: 14px;
   padding: 5px;
+  min-height: 650px;
   max-height: 650px;
   overflow-y: auto;
   border: 5px solid #555;
   max-width: 60%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.753); /* Add a drop shadow with a 10px blur radius */
+  opacity: 0.85;
 
 }
 
@@ -122,6 +145,46 @@
       border-width: 1px;
     }
   }
+    /* Navigation bar styles */
+    .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--background-color);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    color: #d1d1d1;
+}
+
+  .nav-item {
+    margin-right: 20px;
+    color: whitesmoke;
+  }
+
+  /* Set the hover and active styles */
+  .nav-item:hover,
+  .nav-item.active {
+    color: #007bff;
+  }
+
+  nav a {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+  nav a:hover {
+  color: var(--hover);
+}
+
+  nav a:visited {
+  color: var(--visited-link-color);
+}
+
+.nav-item.active {
+  color: var(--visited-link-color);
+}
 
     </style>
   
@@ -132,252 +195,81 @@
         <img src="./header_logo.png" alt="ascii_logo_banner" style="max-width: 100%; max-height: 100px;min-width: 200px;">
       </div>
     </header>
-    <div id="terminal">
-    <pre>
-BUBERRY WORLDWIDE                 
-_____________________________________________
 
-We connect education, gamification, and 
-participation in regenerative agroforestry 
-networks and systems to drive real-world 
-action. 
+    <div id="terminal" style="background-color: #272822;">
+        <header>
+          <nav class="nav" style="color: #d1d1d1;">
+            <a href="#" class="nav-item active expandable" data-target="content-home">Home</a>
+            <a href="#" class="nav-item expandable" data-target="content-about">About</a>
+            <a href="#" class="nav-item expandable" data-target="content-services">Services</a>
+            <a href="#" class="nav-item expandable" data-target="content-contact">Contact</a>
+          </nav>
+        </header>
+        <p>
 
-INTRODUCING OUR PLATFORMS
-_____________________________________________
+        </p>
 
-Our mapping and data collection platform 
-enables us to collect and analyze data on 
-regenerative agroforestry systems and measure 
-their impact. 
 
-Our Moodle LMS platform offers a range of 
-courses and resources to support education 
-and training on agroforestry, sustainability, 
-and more. 
+        <div id="content-home" class="content" style="color: #d1d1d1;">
+            <b>BUBERRY WORLDWIDE</b><br><br>                 
+            We connect education, gamification, and participation in regenerative agroforestry networks and systems to drive real-world action.<br><br> 
+            <p><b>INTRODUCING OUR PLATFORMS</b>
+            <p>Our mapping and data collection platform enables us to collect and analyze data on regenerative agroforestry systems and measure their impact.</p> 
+            <br>
+            Our Moodle LMS platform offers a range of courses and resources to support education and training on agroforestry, sustainability, and more.
+            </p>
+        </div>
+        <div id="content-about" class="content hidden" style="color: #d1d1d1;">
+          ABOUT!
+        </div> 
+        <div id="content-services" class="content hidden" style="color: #d1d1d1;">
+          SERVICES!
+        </div> 
+        <div id="content-contact" class="content hidden" style="color: #d1d1d1;">
+          CONTACT!
+        </div> 
 
-NAVIGATION
-_____________________________________________
-
-<a href="#" class="expandable" data-target="home">HOME</a><br>  
-<div id="home" class="hidden">
-  <p>
-BUBERRY WORLDWIDE
-
-We are a network of people and organizations committed to 
-creating a more sustainable future through regenerative 
-agroforestry. Our mission is to connect and empower people 
-to take action towards a more just and regenerative world.
-              
-
-CONTACT US
-----------
-          
-Have a question or want to get in touch?
-
-- Email: bu@buberryworldwide.com
-         berry@buberryworldwide.com
-</p>
-</div>
-<a href="#" class="expandable" data-target="focus-areas">FOCUS AREAS</a><br>  
-<div id="focus-areas" class="hidden">
-  <p>
-    <pre>
-FOCUS AREAS                 
-
-At Buberry Worldwide, we focus on the following areas to 
-promote regenerative agroforestry and sustainable 
-development. Learn more about each of these areas below. 
+        <script>
+          const expandables = document.querySelectorAll('.expandable');
+          const contents = document.querySelectorAll('.content');
+      
+          expandables.forEach(expandable => {
+            expandable.addEventListener('click', (event) => {
+              event.preventDefault();
+      
+              // Hide all contents
+              contents.forEach(content => {
+                content.classList.add('hidden');
+              });
+      
+              // Show active content
+              const targetId = event.target.dataset.target;
+              const target = document.getElementById(targetId);
+              target.classList.remove('hidden');
+      
+              // Update link colors
+              const links = document.querySelectorAll('.nav-item');
+              links.forEach(link => {
+                if (link === event.target) {
+                  link.classList.add('active');
+                  link.style.color = 'var(--visited-link-color)';
+                } else {
+                  link.classList.remove('active');
+                  link.style.color = '#d1d1d1';
+                }
+              });
+            });
+          });
+        </script>
+      </div>
+      <div style="text-align:center;">
+        <p class="social-media">
+          Follow us on: 
+          <a href="https://twitter.com/buberryworld" target="_blank">🐦</a>
+          <a href="https://www.facebook.com/buberryworldwide" target="_blank">📘</a>
+          <a href="https://www.instagram.com/buberryworldwide/" target="_blank">📷</a>
+        </p>
+      </div>
     
-    
-CLIMATE CHANGE ADAPTATION
--------------------------
-
-Climate change poses a significant threat to
-global food security and environmental sustainability.
-We work to develop and promote regenerative
-agroforestry practices that build resilience to
-climate change, mitigate greenhouse gas emissions,
-and enhance carbon sequestration.
-
-
-EDUCATION AND TRAINING
-----------------------
-
-We believe that education and training are key to building
-capacity for sustainable development. We offer a range of
-courses and resources on regenerative agroforestry,
-sustainability, and related topics through our Moodle
-learning management system (LMS).
-
-
-SOCIAL JUSTICE AND EQUITY
---------------------------
-
-Regenerative agroforestry has the potential to promote social
-justice and equity by providing livelihood opportunities to
-marginalized communities, promoting gender equality, and
-strengthening community resilience. We work to ensure that
-our projects and initiatives are inclusive and equitable.
-
-
-ECOSYSTEM RESTORATION
-----------------------
-
-Degradation of ecosystems is a major threat to biodiversity
-and human well-being. We work to restore degraded ecosystems
-through regenerative agroforestry practices that promote
-biodiversity conservation, soil health, and ecosystem
-services.
-
-
-RESEARCH AND INNOVATION
-------------------------
-
-We are committed to advancing the science and practice of
-regenerative agroforestry through research and innovation.
-We collaborate with researchers and practitioners around
-the world to develop and test new techniques, technologies,
-and approaches to sustainable development. 
-    </pre>
-  </p>
-</div>
-<a href="#" class="expandable" data-target="our-platforms">OUR PLATFORMS</a><br>
-<div id="our-platforms" class="hidden">
-  <p>
-    <pre>
-OUR PLATFORMS                 
-   
-At Buberry Worldwide, we leverage technology to connect 
-people, data, and knowledge to drive real-world action 
-toward regenerative agroforestry and sustainable 
-development. Learn more about our platforms below. 
-
-MAPPING AND DATA COLLECTION PLATFORM
--------------------------------------
-Our mapping and data collection platform enables us to 
-collect and analyze data on regenerative agroforestry 
-systems and measure their impact. The platform allows users 
-to visualize data on maps, collect data using mobile devices 
-and sensors, and analyze data using a range of tools and 
-technologies. 
-
-MOODLE LEARNING MANAGEMENT SYSTEM (LMS)
----------------------------------------
-Our Moodle LMS platform offers a range of courses and 
-resources to support education and training on agroforestry, 
-sustainability, and more. The platform features interactive 
-learning materials, quizzes and assessments, discussion 
-forums, and other tools to support learner engagement and 
-knowledge retention. 
-
-USHAHIDI CROWDSOURCING PLATFORM
--------------------------------
-Our Ushahidi platform enables crowdsourcing of information 
-and feedback from stakeholders involved in regenerative 
-agroforestry projects. The platform allows users to report 
-observations, share feedback, and contribute to decision-making 
-related to project planning, implementation, and monitoring 
-and evaluation. 
-
-BLOCKCHAIN-BASED TRACEABILITY PLATFORM
---------------------------------------
-Our blockchain-based traceability platform enables 
-transparency and traceability in supply chains related to 
-regenerative agroforestry products. The platform uses 
-distributed ledger technology to provide secure, tamper-proof 
-records of product origin, production, and distribution, 
-enabling consumers to make informed choices about the products 
-they buy and their impact on the environment and society. 
-
-REMOTE SENSING AND ANALYTICS PLATFORM
--------------------------------------
-Our remote sensing and analytics platform leverages satellite 
-imagery, machine learning, and other technologies to monitor 
-and analyze environmental and land-use changes related to 
-regenerative agroforestry systems. The platform provides 
-timely and accurate information on ecosystem health, land-use 
-change, and other key indicators to support decision-making 
-and planning related to sustainable development. 
-  </pre>
-</p>
-</div>
-<a href="#" class="expandable" data-target="moodle">MOODLE</a><br>  
-<div id="moodle" class="hidden">
-  <p>
-Our Moodle LMS offers a range of courses and resources to support 
-education and training on agroforestry, sustainability, and more. 
-Whether you're a farmer, student, or environmental enthusiast, our 
-platform provides interactive learning materials, quizzes and 
-assessments, discussion forums, and other tools to support your 
-learning journey.
-                
-With our Moodle LMS, you'll have access to a community of learners and 
-experts in the field of regenerative agroforestry. Our courses cover a 
-variety of topics, including:
-                
-      - Introduction to Agroforestry
-      - Sustainable Farming Practices
-      - Climate Change and Biodiversity Conservation
-      - Ecosystem Services and Natural Resource Management
-      - Social and Economic Impacts of Agroforestry
-                
-To get started, simply create an account and browse our course catalog. 
-We look forward to having you as part of our community and advancing 
-our mission of driving real-world action toward regenerative 
-agroforestry and sustainable development.
-                
-      Join the learning community now! <a href="https://edu.buberryworldwide.com" target="_blank"> ---> 🎓</a>
-</p>
-  </div>
-<a href="#" class="expandable" data-target="ushahidi">USHAHIDI</a><br>
-<div id="ushahidi" class="hidden">
-<p>
-Ushahidi Platform for Resource Managemen
-Ushahidi is a powerful platform that allows us to
-capture and visualize data related to our local
-environment. With it, we are creating an interactive
-resource management network to support localized food
-production and capture, while providing locations of
-community events and spaces.
-
-One of our primary uses of Ushahidi is to capture
-the locations of trees, along with data related to
-their health, harvest times, and ecological value.
-This helps us track pest damage and make informed
-decisions about resource management.
-
-Our network of data helps us make better decisions
-about how to manage our local resources, improving
-our ability to provide for our community and protect
-our environment.
-</p>
-</div>
-</pre>
-<a href="#" class="pulse-link">--More--</a>
-</div>
-    <div style="text-align:center;">
-      <p class="social-media">
-        Follow us on: 
-        <a href="https://twitter.com/buberryworld" target="_blank">🐦</a>
-        <a href="https://www.facebook.com/buberryworldwide" target="_blank">📘</a>
-        <a href="https://www.instagram.com/buberryworldwide/" target="_blank">📷</a>
-      </p>
-    </div>
-    <script>
-      const expandables = document.querySelectorAll('.expandable');
-
-      expandables.forEach(expandable => {
-        expandable.addEventListener('click', (event) => {
-          event.preventDefault();
-          const targetId = event.target.dataset.target;
-          const target = document.getElementById(targetId);
-          if (target.classList.contains('hidden')) {
-            target.classList.remove('hidden');
-          } else {
-            target.classList.add('hidden');
-          }
-        });
-      });
-    </script>
   </body>
 </html>
