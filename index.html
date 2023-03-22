@@ -142,16 +142,17 @@ div {
     max-width: 100%;
     min-width: 80%;
     height: auto;
-    font-size: 13px;
+    font-size: 14px;
     border-width: 1px;
   }
 
   .thumbnail-container img {
-    width: 50%;
-    opacity: 0.9;
-    height: auto;
-    margin-right: 2%;
-  }
+  width: 100%;
+  max-width: none;
+  opacity: 0.9;
+  height: auto;
+  margin-right: 2%;
+}
 
   /* Target mobile devices with a higher specificity */
   div.thumbnail-container.hidden.active.mobile img {
@@ -210,7 +211,7 @@ div {
 }
 
 .thumbnail-container img {
-  width: 25%;
+  width: 35%;
   opacity: 0.9;
   height: auto;
   margin-right: 5%;
