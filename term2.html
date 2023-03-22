@@ -7,10 +7,9 @@
     <style>
 
       body {
-        background-image: url("./background2.png");
+        background-image: url("images/background2.png");
         background-size: cover; /* Set the size of the background to cover the entire screen */
-        background-position: center;    
-      }
+            }
       
       h1 {
         color: #b58900; /* Yellow color of Solarized */
@@ -187,90 +186,13 @@ div {
   color: var(--visited-link-color);
 }
 
-
-/* Thumbnails settings */
-.thumbnail-container {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.thumbnail-container img {
-  width: 20%;
-  opacity: 0.7;
-
-  margin-right: 5%;
-
-}
-
-
-.thumbnail-wrapper {
-  display: inline-block;
-  position: relative;
-}
-
-.thumbnail-wrapper img {
-  display: inline-block;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-
-.thumbnail-wrapper .expandable {
-  position: absolute;
-  top: 5%;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-}
-
-.thumbnail-wrapper a:hover,
-.thumbnail-wrapper a:active {
-  border: 2px dashed var(--link-color);
-}
-
-.expandable {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.expandable a {
-  justify-content: center;
-}
-
-/* social media links */
-.social-media-link a {
-  font-size: 18px;
-}
-
-.pulsing img {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-
-
     </style>
   
   </head>
   <body>
     <header>
       <div style="display: flex; justify-content: center; align-items: center;min-width: 200px; min-height: 100px;">
-        <img src="./trippy_banner.png" alt="ascii_logo_banner" style="max-width: 100%; max-height: 100px;min-width: 200px;">
+        <img src="./header_logo.png" alt="ascii_logo_banner" style="max-width: 100%; max-height: 100px;min-width: 200px;">
       </div>
     </header>
 
@@ -289,114 +211,58 @@ div {
 
 
         <div id="content-home" class="content" style="color: #d1d1d1;">
-            <b>BUBERRY WORLDWIDE</b><br>               
-            <ul>We connect education, gamification, and participation in regenerative agroforestry networks and systems to drive real-world action.<br> </ul><br>
+            <b>BUBERRY WORLDWIDE</b><br><br>                 
+            We connect education, gamification, and participation in regenerative agroforestry networks and systems to drive real-world action.<br><br> 
+            <p><b>INTRODUCING OUR PLATFORMS</b>
+            <p>Our mapping and data collection platform enables us to collect and analyze data on regenerative agroforestry systems and measure their impact.</p> 
+            <br>
+            Our Moodle LMS platform offers a range of courses and resources to support education and training on agroforestry, sustainability, and more.
+            </p>
         </div>
+        <div id="content-about" class="content hidden" style="color: #d1d1d1;">
+          ABOUT!
+        </div> 
+        <div id="content-services" class="content hidden" style="color: #d1d1d1;">
+          SERVICES!
+        </div> 
+        <div id="content-contact" class="content hidden" style="color: #d1d1d1;">
+          CONTACT!
+        </div> 
 
-        <div id="content-about" class="content hidden style="color: #d1d1d1;">
-          <b>
-            ABOUT:
-          </b>
-        </div>
-        
-        <div id="content-services" class="content hidden style="color: #d1d1d1;">
-        <b>
-          SERVICES:
-        </b>  
-        </div>
-
-        <div id="content-contact" class="content hidden style="color: #d1d1d1;">
-NAV BAR CONTACT
-        </div>
-
-        
-
-
-
-
-
-
-
-
-
-        <div id="content-edu" class="content hidden" style="color: #d1d1d1;">
-          EDUCATION CONTENT!
-        </div>
-        
-        <div id="content-game" class="content hidden" style="color: #d1d1d1;">
-          Gamification Content!
-        </div>
-        
-        <div id="content-partic" class="content hidden" style="color: #d1d1d1;">
-          <p>
-            about Participation or whatever!
-          </p> 
-        </div>
-        <div class="thumbnail-container hidden active">
-          <div class="thumbnail-wrapper">
-            <img src="./educate.png" alt="Thumbnail image for the education content">
-            <a href="#" class="expandable" data-target="content-edu"></a>
-          </div>
-          <div class="thumbnail-wrapper">
-            <img src="./gamificate.png" alt="Thumbnail image for the gamification content">
-            <a href="#" class="expandable" data-target="content-game"></a>
-          </div>
-          <div class="thumbnail-wrapper">
-            <img src="./participate.png" alt="Thumbnail image for the participation content">
-            <a href="#" class="expandable" data-target="content-partic"></a>
-          </div>
-        </div>
-        
-        
-        
-
-        
         <script>
           const expandables = document.querySelectorAll('.expandable');
           const contents = document.querySelectorAll('.content');
-
-
-expandables.forEach(expandable => {
-  expandable.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    // Hide all contents
-    contents.forEach(content => {
-      content.classList.add('hidden');
-    });
-
-    // Show active content
-    const targetId = event.target.dataset.target;
-    const target = document.getElementById(targetId);
-    target.classList.remove('hidden');
-
-    // Hide thumbnails
-    document.querySelector('.thumbnail-container').classList.add('hidden');
-
-    const navItems = document.querySelectorAll('.nav-item');
-
-    document.querySelectorAll('.thumbnail-wrapper a').forEach(function(thumbnail) {
-  thumbnail.addEventListener('click', function() {
-    document.querySelectorAll('.thumbnail-wrapper a').forEach(function(thumbnail) {
-      thumbnail.classList.remove('active');
-    });
-    this.classList.add('active');
-  });
-});
-
-    // Update link colors
-    expandables.forEach(link => {
-      if (link === event.target) {
-        link.style.color = 'var(--visited-link-color)';
-      } else {
-        link.style.color = '#d1d1d1';
-      }
-    });
-  });
-});
+      
+          expandables.forEach(expandable => {
+            expandable.addEventListener('click', (event) => {
+              event.preventDefault();
+      
+              // Hide all contents
+              contents.forEach(content => {
+                content.classList.add('hidden');
+              });
+      
+              // Show active content
+              const targetId = event.target.dataset.target;
+              const target = document.getElementById(targetId);
+              target.classList.remove('hidden');
+      
+              // Update link colors
+              const links = document.querySelectorAll('.nav-item');
+              links.forEach(link => {
+                if (link === event.target) {
+                  link.classList.add('active');
+                  link.style.color = 'var(--visited-link-color)';
+                } else {
+                  link.classList.remove('active');
+                  link.style.color = '#d1d1d1';
+                }
+              });
+            });
+          });
         </script>
       </div>
-      <div style="text-align:center;" class="social-media-link">
+      <div style="text-align:center;">
         <p class="social-media">
           Follow us on: 
           <a href="https://twitter.com/buberryworld" target="_blank">🐦</a>
