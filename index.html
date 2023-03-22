@@ -121,7 +121,7 @@ div {
 }
 
 .logo {
-  width: 50%;
+  width: 60%;
   height: auto;
   max-width: 300px;
   position: absolute;
@@ -136,24 +136,30 @@ div {
   display: none;
 }
 
-  /* Mobile styles */
-  @media screen and (max-width: 728px) {
-    #terminal {
-      max-width: 100%;
-      min-width: 80%;
-      height: auto;
-      font-size: 13px;
-      border-width: 1px;
-    }
-
-.thumbnail-container img {
-  width: 50%;
-  opacity: 0.9;
-  height: auto;
-  margin-right: 2%;
-}
-
+ /* Mobile styles */
+@media screen and (max-width: 728px) {
+  #terminal {
+    max-width: 100%;
+    min-width: 80%;
+    height: auto;
+    font-size: 13px;
+    border-width: 1px;
   }
+
+  .thumbnail-container img {
+    width: 50%;
+    opacity: 0.9;
+    height: auto;
+    margin-right: 2%;
+  }
+
+  /* Target mobile devices with a higher specificity */
+  div.thumbnail-container.hidden.active.mobile img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+}
     /* Navigation bar styles */
     .nav {
     display: flex;
