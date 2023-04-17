@@ -3,294 +3,7 @@
   <head>
     <title>buberry@worldwide:~$</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-
-      body {
-        background-image: url("images/background2.png");
-        background-size: cover; /* Set the size of the background to cover the entire screen */
-        background-position: center;    
-      }
-      
-      h1 {
-        color: #b58900; /* Yellow color of Solarized */
-          }
-
-
-      .social-media {
-        color: #dadada; /* Change font color to white */
-        font-family: 'Courier New', Courier, monospace; /* Change font family to a monospace font */
-        font-size: 18px; /* Change font size */
-        margin: 20px; /* Add margin to the element */
-          }
-
-      .pulse-link {
-        color: #000; /* Change the color to your desired color */
-        text-decoration: none; /* Remove the underline */
-        animation: pulse 2s infinite; /* Add the pulse animation */
-          }
-
-      @keyframes pulse {
-        0% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.5;
-          transform: scale(1.2);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      
-      pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-b {
-  font-weight: bold;
-  background: linear-gradient(to right, #bd93f9, #ff79c6);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-div {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 10px;
-}
-
-
-/* Color scheme for terminal */
-:root {
-  --text-color: #d1d1d1;
-  --accent-color: #50fa7b;
-  --background-color: #272822;
-  --heading-color-1: #F8F8F2;
-  --heading-color-2: #F8F8F2;
-  --heading-color-3: #F8F8F2;
-  --link-color: #bd93f9;
-  --visited-link-color: #ff79c6;
-  --button-color: #50fa7b;
-  --button-text-color: #F8F8F2;
-  --hover: #44475a; 
-}
-
-
-/* Apply theme to terminal */
-#terminal {
-  margin: 0 auto;
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Source Code Pro', monospace;
-  font-size: 14px;
-  padding: 5px;
-  min-height: 650px;
-  max-height: 650px;
-  overflow-y: auto;
-  border: 5px solid #555;
-  max-width: 60%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.753); /* Add a drop shadow with a 10px blur radius */
-  opacity: 0.85;
-
-}
-
-/* Style the links */
-#terminal a {
-  color: var(--link);
-}
-
-#terminal a:hover {
-  color: var(--hover);
-}
-
-.banner {
-  text-align: center;
-  color: whitesmoke;
-
-}
-
-.container {
-  display: flex;
-  justify-content: flex-start;
-  height: 100vh;
-}
-
-.logo {
-  width: 60%;
-  height: auto;
-  max-width: 300px;
-  position: absolute;
-  margin: 0 auto;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Hide the expanded content by default */
-.hidden {
-  display: none;
-}
-
- /* Mobile styles */
-@media screen and (max-width: 728px) {
-  #terminal {
-    max-width: 100%;
-    min-width: 80%;
-    height: auto;
-    font-size: 14px;
-    border-width: 1px;
-  }
-
-  .thumbnail-container img {
-  width: 100%;
-  max-width: none;
-  opacity: 0.9;
-  height: auto;
-  margin-right: 2%;
-}
-
-  /* Target mobile devices with a higher specificity */
-  div.thumbnail-container.hidden.active.mobile img {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-  }
-}
-    /* Navigation bar styles */
-    .nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    background-color: var(--background-color);
-    font-family: 'Source Code Pro', monospace;
-    font-size: 14px;
-    color: #d1d1d1;
-}
-
-  .nav-item {
-    margin-right: 20px;
-    color: whitesmoke;
-  }
-
-  /* Set the hover and active styles */
-  .nav-item:hover,
-  .nav-item.active {
-    color: #007bff;
-  }
-
-  nav a {
-  color: var(--button-color);
-  text-decoration: none;
-}
-
-  nav a:hover {
-  color: var(--hover);
-}
-
-  nav a:visited {
-  color: var(--visited-link-color);
-}
-
-.nav-item.active {
-  color: var(--visited-link-color);
-}
-
-
-/* Thumbnails settings */
-.thumbnail-container {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.thumbnail-container img {
-  width: 35%;
-  opacity: 0.9;
-  height: auto;
-  margin-right: 5%;
-}
-
-
-.thumbnail-wrapper {
-  display: inline-block;
-  position: relative;
-}
-
-.thumbnail-wrapper img {
-  display: inline-block;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  0% {
-    transform: scale(1);
-  }
-}
-
-
-
-.thumbnail-wrapper .expandable {
-  position: absolute;
-  top: 5%;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-}
-
-.thumbnail-wrapper a:hover,
-.thumbnail-wrapper a:active {
-  border: 2px dashed var(--link-color);
-}
-
-.expandable {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.expandable a {
-  justify-content: center;
-}
-
-/* social media links */
-.social-media-link a {
-  font-size: 18px;
-}
-
-.pulsing img {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-#my-image {
-  display: none; /* Hide the image by default */
-  position: absolute; /* Position the image absolutely */
-  top: 50px;
-  left: 50px;
-}
-
-.hover-img:hover + #my-image {
-  display: block; /* Show the image when the hover class is applied to the span element */
-}
-
-
-    </style>
-  
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
     <header>
@@ -358,13 +71,44 @@ div {
           <p>We offer data collection services through crowdsourced data to provide better timing and knowledge of local fruit tree health and harvestability. Our data collection includes tree mapping, services mapping, producers, and markets, among other data points. With this information, we can provide valuable insights to help farmers and landowners make informed decisions about their land use and resource production. <ul>Click <b><a href="https://buberry.ushahidi.io/views/map" style="text-decoration: underline;">here</a></b> to learn more about our data collection services.</p></ul>
     
           <h3>Blockchain-Verified Competencies and Game Tokens</h3>
-          <p>Our third service involves providing blockchain-verified competencies and game tokens to participate in a digital economy backed by the resource production of the system. By completing our competency-based courses, learners can earn verified competencies and game tokens that can be used to access exclusive resources and participate in a digital economy that rewards sustainable land management practices. This system also provides greater transparency and accountability for resource production, benefiting farmers, landowners, and the environment. <ul>Click <b><a href="#">here</a></b> to learn more about our blockchain-verified competencies and game tokens.</p></ul>
+          <p>Our third service involves providing blockchain-verified competencies and game tokens to participate in a digital economy backed by the resource production of the system. By completing our competency-based courses, learners can earn verified competencies and game tokens that can be used to access exclusive resources and participate in a digital economy that rewards sustainable land management practices. This system also provides greater transparency and accountability for resource production, benefiting farmers, landowners, and the environment. 
+          <ul>
+            <div>
+              Click <b><a href="#" class="expandable" data-target="content-gametokens">here</a></b> to learn more about our blockchain-verified competencies and game tokens.</p>
+            </div>
+          </ul>
         </div>
         </div>
 
         <div id="content-contact" class="content hidden style="color: #d1d1d1;">
-NAV BAR CONTACT
+          <div style="color: #d1d1d1;">
+            NAV BAR CONTACT
+          </div>
+
         </div>
+
+        <div id="content-gametokens" class="content hidden style="color: #d1d1d1;">
+          <h2><b>GAME TOKENS:</b></h2>
+          <div class="gametokens-container">
+            <div class="gametokens-text" style="color: #d1d1d1;">
+              <p>Here is some text about the NFTs:</p>
+              <ul>
+                <li>NFT 1</li>
+                <li>NFT 2</li>
+                <li>NFT 3</li>
+                <li>NFT 4</li>
+              </ul>
+            </div>
+            <div class="gametokens-images">
+              <img src="/home/nhac/Pictures/Singles_Cards_PNG/Singles Cards PNG/bakingSet.png">
+              <img src="/home/nhac/Pictures/Singles_Cards_PNG/Singles Cards PNG/bakingSet.png">
+              <img src="/home/nhac/Pictures/Singles_Cards_PNG/Singles Cards PNG/bakingSet.png">
+              <img src="/home/nhac/Pictures/Singles_Cards_PNG/Singles Cards PNG/bakingSet.png">
+            </div>
+          </div>
+        </div>
+
+
 
         
 
