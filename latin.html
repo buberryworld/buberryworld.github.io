@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Terminal Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url('background.jpg');
+			background-size: cover;
+		}
+
+		.terminal {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			padding: 20px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-family: monospace;
+			font-size: 18px;
+			overflow-y: scroll;
+		}
+
+		.logo {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			display: block;
+			width: 200px;
+			height: 50px;
+			background-image: url('logo.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 0 10px;
+			border-bottom: 2px solid transparent;
+			transition: border-bottom-color 0.2s ease-in-out;
+		}
+
+		nav a:hover {
+			border-bottom-color: #fff;
+		}
+
+		nav a.active {
+			border-bottom-color: #00ff00;
+		}
+
+		.content {
+			padding: 20px;
+			box-sizing: border-box;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: justify;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<div class="terminal">
+		<nav>
+			<a href="#" class="active">Home</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+		</nav>
+		<div class="content">
+			<h1>Welcome to my Terminal Website</h1>
+			<p>This is a sample website designed to look like a terminal window. You can use the navigation links above to navigate through the site.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id bibendum velit. Aliquam sed eros ac ex tincidunt hendrerit nec eu nibh. Vivamus quis risus a ipsum sollicitudin suscipit a eu nunc. Vestibulum nec neque rhoncus, fringilla dolor nec, varius massa. Nulla facilisi. Nulla pulvinar enim non felis lobortis, vel fermentum elit luctus. Aliquam ultrices elit ac vehicula finibus. Sed posuere, nisi eu tempus porttitor, purus dui tincidunt enim, in euismod
+
+augue velit non velit. Nullam euismod ipsum nec magna dictum bibendum. Aliquam vel urna nec turpis fringilla auctor. Curabitur euismod efficitur lectus, id dictum quam pellentesque nec. Nullam bibendum ullamcorper magna, vel hendrerit quam facilisis et. Vestibulum nec elit auctor, efficitur ipsum vel, luctus nisi.</p>
+<p>Nulla viverra velit ac mauris mollis ultricies. Aliquam euismod ullamcorper felis, in facilisis dolor tempus ac. Donec non leo ac velit bibendum efficitur. Praesent varius, enim vel consequat fringilla, neque tellus tristique ante, vel luctus nunc sapien sed lacus. Fusce feugiat, ipsum id dapibus auctor, nisl felis fermentum augue, ut posuere lorem ipsum sed nibh. Vestibulum eu bibendum quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec posuere neque ut urna convallis iaculis. Maecenas ut lacus vel risus sodales convallis sed a elit.</p>
+<p>Quisque semper vestibulum velit, sed dignissim turpis ultrices ut. Nullam nec libero vel enim dictum tempus a vitae odio. Fusce euismod tristique lacus, quis molestie nibh feugiat id. Integer scelerisque odio at ligula egestas iaculis. Curabitur maximus ante non nulla suscipit venenatis. Praesent sit amet ligula at quam hendrerit fringilla. Donec vestibulum ullamcorper sem eget bibendum. Aliquam vel mi augue. Sed sit amet consequat quam. Fusce quis mauris arcu. Nam sit amet neque pharetra, fermentum nisi quis, venenatis lectus. Suspendisse in enim id orci faucibus rhoncus. Vestibulum vel lorem a ex imperdiet varius. Vestibulum tempus sagittis tellus, sit amet malesuada tellus dictum eget.</p>
+</div>
+</div>
+<div class="logo"></div>
+<script>
+const navLinks = document.querySelectorAll('nav a');
+const content = document.querySelector('.content');
+
+	navLinks.forEach(link => {
+		link.addEventListener('click', function(event) {
+			event.preventDefault();
+			navLinks.forEach(link => link.classList.remove('active'));
+			link.classList.add('active');
+			content.innerHTML = `<h1>${link.innerHTML}</h1><p>${link.innerHTML} content goes here...</p>`;
+		});
+	});
+</script>
+</body>
+</html> 

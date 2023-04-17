@@ -15,7 +15,8 @@
       h1 {
         color: #b58900; /* Yellow color of Solarized */
           }
-          
+
+
       .social-media {
         color: #dadada; /* Change font color to white */
         font-family: 'Courier New', Courier, monospace; /* Change font family to a monospace font */
@@ -276,6 +277,16 @@ div {
   animation-iteration-count: infinite;
 }
 
+#my-image {
+  display: none; /* Hide the image by default */
+  position: absolute; /* Position the image absolutely */
+  top: 50px;
+  left: 50px;
+}
+
+.hover-img:hover + #my-image {
+  display: block; /* Show the image when the hover class is applied to the span element */
+}
 
 
     </style>
@@ -303,20 +314,52 @@ div {
 
 
         <div id="content-home" class="content" style="color: #d1d1d1;">
-            <b>BUBERRY WORLDWIDE</b><br>               
-            <ul>We connect education, gamification, and participation in regenerative agroforestry networks and systems to drive real-world action.<br> </ul><br>
+            <h2><b>BUBERRY WORLDWIDE</b></h2>
+            <div>
+              <p>At Buberry Worldwide, we are committed to advancing sustainable land management methods by providing <b>accessible</b> and <b>verifiable</b> knowledge to individuals and communities. Our focus is on creating innovative and competency-based learning resources that help people engage in the food system and benefit from it.</p>
+            
+              <p>We believe that everyone should have the opportunity to learn about sustainable land management practices and how to implement them in their own communities. By providing accessible and engaging educational resources, we aim to empower individuals and communities to make informed decisions about their land use and contribute to a more sustainable future.</p>
+            
+              <p>Through our <b>data collection</b> and analysis, we are able to better understand how to utilize public and private properties for food production and other resource-generating activities. By collaborating with local communities, we are able to create meaningful and impactful change in the food system.</p>
+            
+              <p><b>Join us</b> in our mission to promote sustainable land management and create a better future for all.</p>
+            </div>
+                         
         </div>
 
-        <div id="content-about" class="content hidden style="color: #d1d1d1;">
-          <b>
+        <div id="content-about" class="content hidden ;">
+          <h2><b>
             ABOUT:
-          </b>
+          </b></h2>
+          <div style="color: #d1d1d1">
+            
+            <p>At Buberry Worldwide, we are dedicated to promoting sustainable land management practices to create a better future for all. Our company was founded on the belief that we can make a positive impact on the environment by empowering individuals and communities to take action towards sustainability.</p>
+      
+            <p>Our journey began when our founders <span class="hover-img"><b>Bu and Berry</b></span>, witnessed the devastating effects of land degradation and unsustainable land use practices on local communities during their travels around the world. They became determined to make a difference by providing accessible and verifiable knowledge to people, so they could make informed decisions about their land use and contribute to a more sustainable future.</p>
+            <img id="my-image" src="/home/nhac/Pictures/midjourney/officialbubies_a_giant_purple_dog_eating_a_giant_green_hotdog_w_0547b322-ce3f-434c-91c3-e43e3f0c82f1.png" alt="My Image">
+
+      
+            <p>Today, Buberry Worldwide continues to uphold our mission by creating innovative and competency-based learning resources that help people engage in the food system and benefit from it. We collaborate with local communities, experts, and organizations to design and implement sustainable land management practices that promote environmental conservation, social equity, and economic development.</p>
+      
+            <p>Our ultimate goal is to foster a world where people and nature can thrive together, and we believe that sustainable land management is a crucial step towards achieving this vision. Join us in our mission to promote sustainable land management and create a better future for all.</p>
+          </div>
         </div>
         
         <div id="content-services" class="content hidden style="color: #d1d1d1;">
-        <b>
-          SERVICES:
-        </b>  
+        
+        <h2><b>SERVICES:</b></h2>
+         
+        <div style="color: #d1d1d1;">
+        
+          <h3>Competency-Based Educational Platform</h3>
+          <p>We are proud to offer a competency-based educational platform on Moodle LMS, designed to be gamified with experience points and tailored to different learning paths. Our team travels to experienced farmers and experts in the field to develop content and educational material, including video training, to provide a comprehensive learning experience. These experts also help validate the educational content and assist in building curriculae. Our platform offers a wide range of courses and modules covering topics such as regenerative agroforestry, sustainable land management, and more, providing accessible education for learners of all levels. <ul>Click <b><a href="https://edu.buberryworldwide.com" style="text-decoration: underline;">here</a></b> to explore our educational platform.</p></ul>
+    
+          <h3>Data Collection Services</h3>
+          <p>We offer data collection services through crowdsourced data to provide better timing and knowledge of local fruit tree health and harvestability. Our data collection includes tree mapping, services mapping, producers, and markets, among other data points. With this information, we can provide valuable insights to help farmers and landowners make informed decisions about their land use and resource production. <ul>Click <b><a href="https://buberry.ushahidi.io/views/map" style="text-decoration: underline;">here</a></b> to learn more about our data collection services.</p></ul>
+    
+          <h3>Blockchain-Verified Competencies and Game Tokens</h3>
+          <p>Our third service involves providing blockchain-verified competencies and game tokens to participate in a digital economy backed by the resource production of the system. By completing our competency-based courses, learners can earn verified competencies and game tokens that can be used to access exclusive resources and participate in a digital economy that rewards sustainable land management practices. This system also provides greater transparency and accountability for resource production, benefiting farmers, landowners, and the environment. <ul>Click <b><a href="#">here</a></b> to learn more about our blockchain-verified competencies and game tokens.</p></ul>
+        </div>
         </div>
 
         <div id="content-contact" class="content hidden style="color: #d1d1d1;">
@@ -332,7 +375,7 @@ NAV BAR CONTACT
 
 
 
-
+<!--
         <div id="content-edu" class="content hidden" style="color: #d1d1d1;">
           EDUCATION CONTENT!
         </div>
@@ -361,7 +404,7 @@ NAV BAR CONTACT
           </div>
         </div>
         
-        
+-->
         
 
         
@@ -408,6 +451,26 @@ expandables.forEach(expandable => {
     });
   });
 });
+
+var hoverImg = document.querySelector('.hover-img');
+var myImage = document.querySelector('#my-image');
+
+hoverImg.addEventListener('mousemove', function(e) {
+  // Set the position of the image to the mouse coordinates
+  myImage.style.top = e.pageY + 'px';
+  myImage.style.left = e.pageX + 'px';
+});
+
+hoverImg.addEventListener('mouseenter', function(e) {
+  // Show the image when the mouse enters the hover area
+  myImage.style.display = 'block';
+});
+
+hoverImg.addEventListener('mouseleave', function(e) {
+  // Hide the image when the mouse leaves the hover area
+  myImage.style.display = 'none';
+});
+
         </script>
       </div>
       <div style="text-align:center;" class="social-media-link">
